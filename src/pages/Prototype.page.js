@@ -43,20 +43,20 @@ const text = {
 
 const shortinfo = {
     tesseract: ["2-4", "60", "12+"],
-    ttotm: ["2-4", "60", "12+"],
-    ducklings: ["2-4", "60", "12+"],
-    svf: ["2-4", "60", "12+"],
-    toohot: ["2-4", "60", "12+"],
-    treasurebeach: ["2-4", "60", "12+"],
+    ttotm: ["2-4", "45-60", "12+"],
+    ducklings: ["2-4", "45-60", "10+"],
+    svf: ["2-4", "45", "10+"],
+    toohot: ["2-4", "15", "8+"],
+    treasurebeach: ["2-4", "20-30", "6+"],
 }
 
 const whatscool = {
-    tesseract: ["2-4", "60", "12+"],
-    ttotm: ["2-4", "60", "12+"],
-    ducklings: ["Building a 3D Structure", "Interactive Drafting", "Clever Puzzle Elements"],
-    svf: ["2-4", "60", "12+"],
-    toohot: ["2-4", "60", "12+"],
-    treasurebeach: ["2-4", "60", "12+"],
+    tesseract: ["Rubik's Cubes!", "Thinky Puzzles!", "USP!"],
+    ttotm: ["3-Dimensional Board!", "Interactive Turns!", "Unique Theme!"],
+    ducklings: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
+    svf: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
+    toohot: ["Engaging but casual!", "Anyone can learn!", "Addictive!"],
+    treasurebeach: ["Introduction to deduction!", "Every turn exciting!", "Enjoyable at all ages!"],
 }
 
 const flavourtext = {
@@ -151,7 +151,22 @@ const ShortInfoSection = styled.div`
         border-right: none;
     }
 `
+const CoolBarWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: ${SIZES.LG};
+`
+const CoolBar = styled.div`
+    background-color: black;
+    text-align: center;
+    padding: ${SIZES.LG};
+    margin: ${SIZES.LG};
+    color: white;    
+    font-family: "Archivo";
+    transform: rotate(-2deg);
 
+`
 const Emoji = styled.div`
     font-family: "Noto Emoji";
     padding-right: ${SIZES.LG};
@@ -166,6 +181,7 @@ const FlavourText = styled.div`
     font-family: "Archivo";
     font-style: italic;
     padding: ${SIZES.LG} 0px;
+    margin-top: ${SIZES.LG};
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -174,6 +190,9 @@ const Components = styled.div`
     padding: ${SIZES.LG} 0px;
 `;
 const ComponentHeader = styled.div`
+padding-bottom: ${SIZES.MD};
+
+
 
 `
 const ComponentText = styled.div`
@@ -194,11 +213,11 @@ export const Prototype = () => {
     }
 
     const renderWhatsCool = (wc) => {
-        return <>
-            <div>{wc[0]}</div>
-            <div>{wc[1]}</div>
-            <div>{wc[2]}</div>
-        </>
+        return <CoolBarWrapper>
+            <CoolBar>{wc[0]}</CoolBar>
+            <CoolBar>{wc[1]}</CoolBar>
+            <CoolBar>{wc[2]}</CoolBar>
+        </CoolBarWrapper>
     }
 
     const renderComponents = (cs) => {
@@ -211,17 +230,18 @@ export const Prototype = () => {
 
     return <div>
         <Title>{title[id]}</Title>
+
         <BodyWrapper>
             <Body>{text[id]}</Body>
             <Image src={image[id]} alt="" />
         </BodyWrapper>
+        {renderShortInfo(shortinfo[id])}
         <VideoContainer>
             <Video frameBorder="0" src={`https://www.youtube.com/embed/${videoEmbedIds[id]}`} />
         </VideoContainer>
-        {renderShortInfo(shortinfo[id])}
-        {renderWhatsCool(whatscool[id])}
         <FlavourText>{flavourtext[id]}</FlavourText>
+        {renderWhatsCool(whatscool[id])}
         {renderComponents(components[id])}
-        <BackLink onClick={() => navigate(-1)}>Go Back</BackLink>
+        <BackLink onClick={() => navigate(-1)}>⬅️ Go Back</BackLink>
     </div>
 }

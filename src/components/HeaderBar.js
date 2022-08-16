@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { RouteModal } from "./RouteModal";
+import logo from "../images/logo.webp";
 
 const Wrapper = styled.div`
     display: flex;
@@ -30,7 +31,7 @@ export const HeaderBar = () => {
     const [modalOpen, setModalOpen] = useState(false);
     return <Wrapper>
         <Left>
-            WDBG
+            <img src={logo} alt=""/>
         </Left>
         <Right>
             <Button onClick={() => setModalOpen(true)}>👋</Button>

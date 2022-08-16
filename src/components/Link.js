@@ -4,9 +4,12 @@ import { SIZES } from "../constants";
 
 const SideLink = styled(DomLink)`
     padding: ${SIZES.LG};
-    color: black;
+    color: white;
     font-size: 24px;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 export const Link = ({ to, onClick, children }) => {

@@ -11,13 +11,14 @@ const customStyles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
+        color: "white",
+        backgroundColor: "black",
+        transform: 'translate(-50%, -50%) rotate(-3deg)',
         border: "0px",
         boxShadow: "0px 0px 50px #DDDDDD",
-        borderRadius: "8px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
     },
 };
 

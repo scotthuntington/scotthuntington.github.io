@@ -43,12 +43,6 @@ function App() {
             <Route path="/prototypes/*">
               <Route path="" element={<Prototypes />} />
               <Route path=":id" element={<Prototype />} />
-              {/* <Route path="ducklings" element={<Prototype />} />
-              <Route path="ttotm" element={<Prototype />} />
-              <Route path="tesseract" element={<Prototype />} />
-              <Route path="svf" element={<Prototype />} />
-              <Route path="toohot" element={<Prototype />} />
-              <Route path="treasurebeach" element={<Prototype />} /> */}
             </Route>
             <Route path="about" element={<About />} />
             {/* <Route path="/404" element={<PageNotFound />} /> */}

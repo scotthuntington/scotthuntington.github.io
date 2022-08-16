@@ -85,5 +85,5 @@ export const Prototypes = () => {
         </div>
     </Wrapper>
 
-    return <Grid nogutter data={games} elementRenderer={renderBox} />
+    return <Grid data={games} elementRenderer={renderBox} />
 }
