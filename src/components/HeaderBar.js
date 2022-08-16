@@ -4,11 +4,9 @@ import { SIZES } from "../constants";
 import { RouteModal } from "./RouteModal";
 
 const Wrapper = styled.div`
-    border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
-    min-width: 720px;
-    padding: ${SIZES.XL};
+    width: 100%;
     align-items: center;
 `
 
