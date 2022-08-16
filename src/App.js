@@ -4,6 +4,7 @@ import { HeaderBar } from './components/HeaderBar';
 import { SIZES } from './constants';
 import { About } from './pages/About.page';
 import { Ludography } from './pages/Ludography.page';
+import { Prototype } from './pages/Prototype.page';
 import { Prototypes } from './pages/Prototypes.page';
 
 const Outer = styled.div`
@@ -37,12 +38,21 @@ function App() {
         <HeaderBar />
         <Content>
           <Routes>
-            <Route path="/" element={<Prototypes />} />
+            <Route path="*" element={<Navigate replace to="/prototypes/*" />} />
             <Route path="/ludography" element={<Ludography />} />
-            <Route path="/prototypes" element={<Prototypes />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/404" element={<PageNotFound />} />
-            <Route path="*" element={<Navigate replace to="/404"/>} />
+            <Route path="/prototypes/*">
+              <Route path="" element={<Prototypes />} />
+              <Route path=":id" element={<Prototype />} />
+              {/* <Route path="ducklings" element={<Prototype />} />
+              <Route path="ttotm" element={<Prototype />} />
+              <Route path="tesseract" element={<Prototype />} />
+              <Route path="svf" element={<Prototype />} />
+              <Route path="toohot" element={<Prototype />} />
+              <Route path="treasurebeach" element={<Prototype />} /> */}
+            </Route>
+            <Route path="about" element={<About />} />
+            {/* <Route path="/404" element={<PageNotFound />} /> */}
+            {/* <Route path="*" element={<Navigate replace to="/404"/>} /> */}
           </Routes>
         </Content>
       </Main>
