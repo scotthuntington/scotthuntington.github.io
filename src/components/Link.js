@@ -5,9 +5,11 @@ import { SIZES } from "../constants";
 const SideLink = styled(DomLink)`
   padding: ${SIZES.MD};
   color: black;
-  
+
 `
 
-export const Link = ({ to, children }) => {
-    return <SideLink to={to}>{children}</SideLink>
+export const Link = ({ to, onClick, children }) => {
+    return <SideLink to={to} onClick={() => { if (onClick) onClick() }}>
+        {children}
+    </SideLink>
 }

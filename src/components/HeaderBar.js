@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { SIZES } from "../constants";
+import { RouteModal } from "./RouteModal";
 
 const Wrapper = styled.div`
     background-color: tomato;
@@ -16,12 +18,14 @@ const Right = styled.div`
 `;
 
 export const HeaderBar = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     return <Wrapper>
         <Left>
             Name
         </Left>
         <Right>
-            Menu
+            <button onClick={() => setModalOpen(true)}>Menu</button>
         </Right>
+        <RouteModal isOpen={modalOpen} setOpen={setModalOpen} />
     </Wrapper>
 }
