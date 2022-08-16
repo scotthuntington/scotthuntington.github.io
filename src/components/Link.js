@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { SIZES } from "../constants";
 
 const SideLink = styled(DomLink)`
-  padding: ${SIZES.MD};
-  color: black;
-
+    padding: ${SIZES.LG};
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
 `
 
 export const Link = ({ to, onClick, children }) => {

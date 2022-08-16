@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { HeaderBar } from './components/HeaderBar';
 import { SIZES } from './constants';
@@ -19,11 +19,14 @@ const Main = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  width: 720px;
+  max-width: 720px;
 `
 
 const Content = styled.div`
   padding-top: ${SIZES.XL};
+`
+const PageNotFound = styled.div`
+  
 `
 
 function App() {
@@ -36,7 +39,9 @@ function App() {
             <Route path="/" element={<Prototypes />} />
             <Route path="/ludography" element={<Ludography />} />
             <Route path="/prototypes" element={<Prototypes />} />
-            <Route path="/about/" element={<About />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/404" element={<PageNotFound />} />
+            <Route path="*" element={<Navigate replace to="/404"/>} />
           </Routes>
         </Content>
       </Main>

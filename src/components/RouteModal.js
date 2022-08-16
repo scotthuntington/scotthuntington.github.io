@@ -1,5 +1,7 @@
 import React from "react"
 import ReactModal from "react-modal"
+import styled from "styled-components";
+import { SIZES } from "../constants";
 import { Link } from "./Link";
 
 const customStyles = {
@@ -19,11 +21,17 @@ const customStyles = {
     },
 };
 
+const Cross = styled.div`
+    position: absolute;
+    right: ${SIZES.LG};
+    cursor: pointer;
+`
+
 export const RouteModal = ({ isOpen, setOpen }) => {
     return <ReactModal style={customStyles} isOpen={isOpen} shouldCloseOnOverlayClick>
         <Link to={"/prototypes"} onClick={() => setOpen(false)}>Prototypes</Link>
         <Link to={"/ludography"} onClick={() => setOpen(false)}>Our Games</Link>
         <Link to={"/about"} onClick={() => setOpen(false)}>About Us</Link>
-        <button onClick={() => setOpen(false)}>Close ME</button>
+        <Cross onClick={() => setOpen(false)}>❌</Cross>
     </ReactModal>
 }
