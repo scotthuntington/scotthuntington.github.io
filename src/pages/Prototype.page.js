@@ -1,7 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom"
 import styled from "styled-components"
 import { SIZES } from "../constants"
-import { capitalize } from "../utils"
+import totmCover from "../images/totmcover.png";
+import svfCover from "../images/svfcover.png";
+import tooHotCover from "../images/toohotcover.png";
+import ducklingsCover from "../images/ducklingscover.png";
+import { Grid } from "../components/Grid";
 
 
 const title = {
@@ -11,6 +15,22 @@ const title = {
     svf: "Supervillain Fortress",
     toohot: "Too Hot",
     treasurebeach: "Treasure Beach",
+}
+const image = {
+    tesseract: ducklingsCover,
+    ttotm: totmCover,
+    ducklings: ducklingsCover,
+    svf: svfCover,
+    toohot: tooHotCover,
+    treasurebeach: ducklingsCover,
+}
+const videoEmbedIds = {
+    tesseract: "wqZMWzFPQHQ",
+    ttotm: "wqZMWzFPQHQ",
+    ducklings: "wqZMWzFPQHQ",
+    svf: "wqZMWzFPQHQ",
+    toohot: "wqZMWzFPQHQ",
+    treasurebeach: "wqZMWzFPQHQ",
 }
 const text = {
     tesseract: "TESSERACT is a pick-up-and-deliver game with a literal twist. On your turn, twist your Rubik’s Cube once and carry out the actions you can see. You can navigate your TESSERACT ship around the utopian planet, pick up waste, refine it mid-flight and deliver the resulting energy to the cities that need it, thus gaining prosperity. You can also visit the city councils to hire specialists that will support your TESSERACT’S crew and unlock special abilities. Hiring three specialists will give you a bonus and permanent upgrade, building your engine further. Be the first to gain 100 prosperity to win the game! If you want to know more, get in touch. Thanks for watching!",
@@ -75,25 +95,36 @@ const components = {
         "36 cards",
         "4 Amulet tokens"],
     tesseract: ["4 2x2x2 Rubiks Cubes", "other stuff"],
-}
+};
 
-
-
-
-
-
-
-
-const Wrapper = styled.div`
-
-`
 const Title = styled.div`
     font-size: 24px;
     font-weight: 900;
+    padding-bottom: ${SIZES.XL};
 `
-
+const BodyWrapper = styled.div`
+    display: flex;
+`
+const Image = styled.img`
+    max-height: 250px;
+    height: auto;
+    box-shadow: ${SIZES.MD} ${SIZES.MD} black;
+`;
+const VideoContainer = styled.div`
+position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+`;
+const Video = styled.iframe`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+`;
 const Body = styled.div`
-    padding: ${SIZES.LG} 0px;
+    flex: 1;
+    padding: 0px ${SIZES.LG} ${SIZES.LG} 0px;
     font-family: "Archivo";
 `
 
@@ -139,6 +170,16 @@ const FlavourText = styled.div`
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 `
+const Components = styled.div`
+    padding: ${SIZES.LG} 0px;
+`;
+const ComponentHeader = styled.div`
+
+`
+const ComponentText = styled.div`
+    font-family: "Archivo";
+    padding: ${SIZES.MD};
+`
 export const Prototype = () => {
 
     const { id } = useParams();
@@ -161,15 +202,22 @@ export const Prototype = () => {
     }
 
     const renderComponents = (cs) => {
-        return <div>
-            {cs.map(c => <div>{c}</div>)}
-        </div>
+        const elementRenderer = (c) => <ComponentText>{c}</ComponentText>
+        return <Components>
+            <ComponentHeader>Components:</ComponentHeader>
+            <Grid data={cs} elementRenderer={elementRenderer} />
+        </Components>
     }
 
     return <div>
         <Title>{title[id]}</Title>
-        <Body>{text[id]}</Body>
-        <iframe src={"https://www.youtube.com/watch?v=ScMzIvxBSi4"}></iframe>
+        <BodyWrapper>
+            <Body>{text[id]}</Body>
+            <Image src={image[id]} alt="" />
+        </BodyWrapper>
+        <VideoContainer>
+            <Video frameBorder="0" src={`https://www.youtube.com/embed/${videoEmbedIds[id]}`} />
+        </VideoContainer>
         {renderShortInfo(shortinfo[id])}
         {renderWhatsCool(whatscool[id])}
         <FlavourText>{flavourtext[id]}</FlavourText>
