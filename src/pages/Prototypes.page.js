@@ -1,45 +1,82 @@
+import styled from "styled-components";
 import { Grid } from "../components/Grid";
+import totmCover from "../images/totmcover.png";
+import svfCover from "../images/svfcover.png";
+import tooHotCover from "../images/toohotcover.png";
+import ducklingsCover from "../images/ducklingscover.png";
+import { SIZES } from "../constants";
 
 const games = [
     {
         title: 'Ducklings',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Collect ducks and nestle into various landscapes in this set collection game.',
+        image: ducklingsCover,
+        color: "#42f575"
     },
     {
         title: 'The Temple On The Moon',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Place astronauts in chains on a three dimensional temple board to fulfil multiple goals.',
+        image: totmCover,
+        color: "#f52aee"
     },
     {
         title: 'Tesseract',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Use a Rubik’s cube to pick up and deliver energy to a prospering utopian planet.',
+        image: 'www.url.de',
+        color: "#95f2f5"
     },
     {
         title: 'Supervillain Fortress',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Draft dice to construct a multi-level evil fortress with all the bells and whistles.',
+        image: svfCover,
+        color: '#d47b00'
     },
     {
         title: 'Too Hot',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Try your luck collecting hot spices in this interactive, casual dice rolling game.',
+        image: tooHotCover,
+        color: '#f7f488'
     },
     {
         title: 'Treasure Beach',
-        flavour: 'Do a thing',
-        image: 'www.url.de'
+        flavour: 'Combine guesswork and deduction to reveal the best treasure on the beach.',
+        image: 'XXX',
+        color: '#adcbde'
     }
 ]
+const Wrapper = styled.div`
+    background-color: ${props => props.color};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: ${SIZES.XL};
+`
+const Image = styled.img`
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    box-shadow: 10px 10px black;
+    margin: ${SIZES.LG};
+`
+const Title = styled.div`
+    padding: ${SIZES.XL} 0 ${SIZES.LG} 0;
+    font-weight: 900;
+`
+const Flavour = styled.div`
+    font-style: italic;
+`
 
 export const Prototypes = () => {
 
-    const renderBox = (g) => <>
-        <div>{g.title}</div>
-        <div>{g.image}</div>
-        <div>{g.flavour}</div>
-    </>
+    const renderBox = (g) => <Wrapper color={g.color}>
+        <Image src={g.image} alt="" />
+        <div>
+            <Title>{g.title}</Title>
+            <Flavour>{g.flavour}</Flavour>
+        </div>
+    </Wrapper>
 
     return <Grid nogutter data={games} elementRenderer={renderBox} />
 }

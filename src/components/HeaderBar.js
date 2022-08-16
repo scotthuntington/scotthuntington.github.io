@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { SIZES } from "../constants";
 import { RouteModal } from "./RouteModal";
 
 const Wrapper = styled.div`

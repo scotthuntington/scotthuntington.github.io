@@ -20,6 +20,7 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 720px;
+  padding-bottom: ${SIZES.XXL};
 `
 
 const Content = styled.div`
