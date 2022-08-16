@@ -3,5 +3,6 @@ export const SIZES = {
     SM: "4px",
     MD: "8px",
     LG: "16px",
-    XL: "32px"
+    XL: "32px",
+    XXL: "48px"
 }

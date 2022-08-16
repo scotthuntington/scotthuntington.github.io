@@ -1,0 +1,1 @@
+export const Ludography = () => <div>Ludography</div>

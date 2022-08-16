@@ -1,17 +1,17 @@
-import { Container, Row, Col } from 'react-grid-system';
+import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
+import { HeaderBar } from './components/HeaderBar';
 import { SIZES } from './constants';
+import { About } from './pages/About.page';
+import { Ludography } from './pages/Ludography.page';
+import { Prototypes } from './pages/Prototypes.page';
 
-const StyledContainer = styled(Container)`
-  padding: ${SIZES.MD};
-  width: 720px;
-  border: 1px solid black;
-`
-
-const Wrapper = styled.div`
+const Outer = styled.div`
   display: flex;
-  width: 100vw;
   height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: ${SIZES.XL};
 `
 
 const Main = styled.div`
@@ -19,42 +19,28 @@ const Main = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: ${SIZES.XL};
+  width: 720px;
 `
 
-const Side = styled.div`
-  display: flex;
-  width: 200px;
-  flex-direction: column;
-  background-color: #FFF6F4;
-`
-
-const SideLink = styled.div`
-  padding: ${SIZES.MD};
+const Content = styled.div`
+  padding-top: ${SIZES.XL};
 `
 
 function App() {
   return (
-    <Wrapper>
-      <Side>
-        <SideLink>Prototypes</SideLink>
-        <SideLink>Ludography</SideLink>
-        <SideLink>About Us</SideLink>
-      </Side>
+    <Outer>
       <Main>
-        <StyledContainer>
-          <Row>
-
-            <Col md={12}>
-              Hello
-            </Col>
-            <Col>
-              Hello
-            </Col>
-          </Row>
-        </StyledContainer>
+        <HeaderBar />
+        <Content>
+          <Routes>
+            <Route path="/" element={<Prototypes />} />
+            <Route path="/ludography" element={<Ludography />} />
+            <Route path="/prototypes" element={<Prototypes />} />
+            <Route path="/about/" element={<About />} />
+          </Routes>
+        </Content>
       </Main>
-    </Wrapper>
+    </Outer>
   );
 }
 

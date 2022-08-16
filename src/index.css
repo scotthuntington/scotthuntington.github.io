@@ -2,6 +2,7 @@ body {
   font-family: 'Noto Emoji', 'Archivo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: large;
 }
 
 code {
