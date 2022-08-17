@@ -113,6 +113,9 @@ const Title = styled.div`
     text-align: center;
     transform: rotate(-2deg);
 `
+const Container = styled.div`
+    width: 90%;
+`
 const Image = styled.img`
     max-height: 250px;
     height: auto;
@@ -137,19 +140,23 @@ const Body = styled.div`
 `
 
 const ShortInfoWrapper = styled.div`
+    max-width: 720px;
     font-family: "Archivo";
     border: 2px solid black;
     box-shadow: ${SIZES.MD} ${SIZES.MD} black;
     margin: ${SIZES.LG} ${SIZES.MD} 0px 0px;
-    display: flex;
+    display: grid;
     align-items: center;
     text-align: center;
     margin-bottom: ${SIZES.XL};
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 
 `
 
 const ShortInfoSection = styled.div`
-    flex: 1;
     border-right: 2px solid black;
     padding: ${SIZES.MD};
     display: flex;
@@ -158,12 +165,21 @@ const ShortInfoSection = styled.div`
     :last-child {
         border-right: none;
     }
+    @media (max-width: 600px) {
+        border-right: 0px;
+        border-bottom: 2px solid black;
+    }
 `
 const CoolBarWrapper = styled.div`
-    display: flex;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     padding-top: ${SIZES.LG};
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `
 const CoolBar = styled.div`
     background-color: black;
@@ -230,7 +246,7 @@ export const Prototype = () => {
         </Components>
     }
 
-    return <div>
+    return <>
         <Title>{title[id]}</Title>
         <TwoPanel
             a={<Image src={image[id]} alt="" />}
@@ -247,5 +263,5 @@ export const Prototype = () => {
             e.preventDefault();
         }}>Interested?</Button>
         <BackButton />
-    </div>
+    </>
 }
