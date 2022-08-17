@@ -8,7 +8,7 @@ import ccp from "../images/ccp.webp";
 import atlant from "../images/atlant.webp";
 import bigdig from "../images/bigdig.webp";
 import styled from "styled-components";
-import { SIZES } from "../constants";
+import { COLORS, SIZES } from "../constants";
 import { Title } from "../components/Title";
 
 const data = [{
@@ -70,6 +70,10 @@ const Wrapper = styled.div`
     height: 100%;
     padding: ${SIZES.XL};
     cursor: pointer;
+    &:hover {
+        background-color: ${COLORS.PRIMARY};
+        color: white;
+    }
 `
 const Image = styled.img`
     max-height: 200px;

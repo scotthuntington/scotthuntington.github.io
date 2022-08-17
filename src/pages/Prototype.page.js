@@ -5,6 +5,9 @@ import totmCover from "../images/totmcover.png";
 import svfCover from "../images/svfcover.png";
 import tooHotCover from "../images/toohotcover.png";
 import ducklingsCover from "../images/ducklingscover.png";
+import tessCover from "../images/tessCover.png";
+import treasureCover from "../images/treasureCover.png";
+
 import { Grid } from "../components/Grid";
 import { TwoPanel } from "../components/TwoPanel";
 import { BackButton } from "../components/BackButton";
@@ -20,12 +23,12 @@ const title = {
     treasurebeach: "Treasure Beach",
 }
 const image = {
-    tesseract: ducklingsCover,
+    tesseract: tessCover,
     ttotm: totmCover,
     ducklings: ducklingsCover,
     svf: svfCover,
     toohot: tooHotCover,
-    treasurebeach: ducklingsCover,
+    treasurebeach: treasureCover,
 }
 const videoEmbedIds = {
     tesseract: "wqZMWzFPQHQ",

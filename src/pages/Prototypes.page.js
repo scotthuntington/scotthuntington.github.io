@@ -4,9 +4,12 @@ import totmCover from "../images/totmcover.png";
 import svfCover from "../images/svfcover.png";
 import tooHotCover from "../images/toohotcover.png";
 import ducklingsCover from "../images/ducklingscover.png";
+import treasureCover from "../images/treasureCover.png";
+import tessCover from "../images/tessCover.png"
 import { SIZES } from "../constants";
 import { useNavigate } from "react-router-dom";
 import { Title } from "../components/Title";
+import { inverse } from "../utils";
 
 const games = [
     {
@@ -26,7 +29,7 @@ const games = [
     {
         title: 'Tesseract',
         flavour: 'Use a Rubik’s cube to pick up and deliver energy to a prospering utopian planet.',
-        image: 'www.url.de',
+        image: tessCover,
         color: "#95f2f5",
         link: "tesseract"
     },
@@ -47,7 +50,7 @@ const games = [
     {
         title: 'Treasure Beach',
         flavour: 'Combine guesswork and deduction to reveal the best treasure on the beach.',
-        image: 'XXX',
+        image: treasureCover,
         color: '#adcbde',
         link: "treasurebeach"
     }
@@ -60,6 +63,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     height: 100%;
     padding: ${SIZES.XL};
+    cursor: pointer;
+    &:hover {
+        background-color: ${props => inverse(props.color)};
+        color: white;
+    }
 `
 const Image = styled.img`
     max-height: 200px;
