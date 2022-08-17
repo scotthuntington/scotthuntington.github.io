@@ -86,7 +86,7 @@ const Flavour = styled.div`
 
 export const Prototypes = () => {
     let navigate = useNavigate();
-    const renderBox = (g) => <Wrapper onClick={() => navigate(g.link)} color={g.color}>
+    const renderBox = (g) => <Wrapper onClick={() => { navigate(g.link); window.scrollTo(0, 0) }} color={g.color}>
         <Image src={g.image} alt="" />
         <div>
             <GameTitle>{g.title}</GameTitle>

@@ -9,5 +9,5 @@ const BackLink = styled.div`
 `
 export const BackButton = () => {
     const navigate = useNavigate();
-    return <BackLink onClick={() => navigate(-1)}>⬅️ Go Back</BackLink>
+    return <BackLink onClick={() => { navigate(-1); window.scrollTo(0, 0) }}>⬅️ Go Back</BackLink>
 }
