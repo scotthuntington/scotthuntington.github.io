@@ -30,13 +30,16 @@ const image = {
     toohot: tooHotCover,
     treasurebeach: treasureCover,
 }
+
+const SUPABABES = "wqZMWzFPQHQ";
+
 const videoEmbedIds = {
-    tesseract: "wqZMWzFPQHQ",
-    ttotm: "wqZMWzFPQHQ",
-    ducklings: "wqZMWzFPQHQ",
-    svf: "wqZMWzFPQHQ",
-    toohot: "wqZMWzFPQHQ",
-    treasurebeach: "wqZMWzFPQHQ",
+    tesseract: SUPABABES,
+    ttotm: "vT9Z6zf1f_8",
+    ducklings: "WibZzmwVaVo",
+    svf: "2DgzE2_dz68",
+    toohot: SUPABABES,
+    treasurebeach: SUPABABES,
 }
 const text = {
     tesseract: "TESSERACT is a pick-up-and-deliver game with a literal twist. On your turn, twist your Rubik’s Cube once and carry out the actions you can see. You can navigate your TESSERACT ship around the utopian planet, pick up waste, refine it mid-flight and deliver the resulting energy to the cities that need it, thus gaining prosperity. You can also visit the city councils to hire specialists that will support your TESSERACT’S crew and unlock special abilities. Hiring three specialists will give you a bonus and permanent upgrade, building your engine further. Be the first to gain 100 prosperity to win the game! If you want to know more, get in touch. Thanks for watching!",
@@ -243,6 +246,6 @@ export const Prototype = () => {
             window.location.href = "mailto:wedesignboardgames@gmail.com";
             e.preventDefault();
         }}>Interested?</Button>
-        <BackButton/>
+        <BackButton />
     </div>
 }
