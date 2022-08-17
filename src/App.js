@@ -38,7 +38,7 @@ function App() {
         <HeaderBar />
         <Content>
           <Routes>
-            <Route path="*" element={<Navigate replace to="/prototypes/*" />} />
+            <Route path="*" element={<Navigate replace to="/prototypes" />} />
             <Route path="/ludography" element={<Ludography />} />
             <Route path="/prototypes/*">
               <Route path="" element={<Prototypes />} />
