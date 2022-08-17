@@ -45,8 +45,8 @@ function App() {
               <Route path=":id" element={<Prototype />} />
             </Route>
             <Route path="about" element={<About />} />
-            {/* <Route path="/404" element={<PageNotFound />} /> */}
-            {/* <Route path="*" element={<Navigate replace to="/404"/>} /> */}
+            <Route path="/404" element={<PageNotFound />} />
+            <Route path="*" element={<Navigate replace to="/404"/>} />
           </Routes>
         </Content>
       </Main>
