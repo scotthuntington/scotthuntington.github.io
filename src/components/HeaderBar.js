@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { RouteModal } from "./RouteModal";
 import logo from "../images/logo.webp";
+import { COLORS } from "../constants";
 
 const Wrapper = styled.div`
     display: flex;
@@ -15,7 +16,7 @@ const Button = styled.div`
     font-weight: 800;
     cursor: pointer;
     &:hover {
-        color: pink;
+        color: ${COLORS.PRIMARY};
     }
 `
 

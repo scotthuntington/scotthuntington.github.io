@@ -6,3 +6,7 @@ export const SIZES = {
     XL: "32px",
     XXL: "48px"
 }
+
+export const COLORS = {
+    PRIMARY: "#FF8360"
+}

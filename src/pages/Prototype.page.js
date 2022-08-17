@@ -8,6 +8,7 @@ import ducklingsCover from "../images/ducklingscover.png";
 import { Grid } from "../components/Grid";
 import { TwoPanel } from "../components/TwoPanel";
 import { BackButton } from "../components/BackButton";
+import { Button } from "../components/Button";
 
 
 const title = {
@@ -183,7 +184,7 @@ const FlavourText = styled.div`
     border-bottom: 2px solid black;
 `
 const Components = styled.div`
-    padding: ${SIZES.LG} 0px;
+    padding: ${SIZES.LG} 0px ${SIZES.XL} 0px;
 `;
 const ComponentHeader = styled.div`
 padding-bottom: ${SIZES.MD};
@@ -198,7 +199,6 @@ const ComponentText = styled.div`
 export const Prototype = () => {
 
     const { id } = useParams();
-    const navigate = useNavigate();
 
     const renderShortInfo = (si) => {
         return <ShortInfoWrapper>
@@ -236,6 +236,10 @@ export const Prototype = () => {
         <FlavourText>{flavourtext[id]}</FlavourText>
         {renderWhatsCool(whatscool[id])}
         {renderComponents(components[id])}
+        <Button onClick={(e) => {
+            window.location.href = "mailto:wedesignboardgames@gmail.com";
+            e.preventDefault();
+        }}>Interested?</Button>
         <BackButton/>
     </div>
 }

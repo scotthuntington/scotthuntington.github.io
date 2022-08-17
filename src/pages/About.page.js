@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { BackButton } from "../components/BackButton"
+import { Button } from "../components/Button"
 import { Title } from "../components/Title"
 import { TwoPanel } from "../components/TwoPanel"
 import { SIZES } from "../constants"
@@ -12,6 +13,11 @@ const Image = styled.img`
     height: auto;
 `
 
+const Sub = styled.div`
+    text-align: center;
+    font-size: larger;
+`
+
 const Body = styled.div`
     font-family: "Archivo";
 `
@@ -19,12 +25,13 @@ const Body = styled.div`
 const TPWrapper = styled.div`
     padding-bottom: ${SIZES.XL};
 `
+
 export const About = () => {
     return <>
         <Title>About Us!</Title>
         <TPWrapper>
-            <div>We design board games.</div>
-            <div>Driven by curiosity, inspired by fun.</div>
+            <Sub>We design board games.</Sub>
+            <Sub>Driven by curiosity, inspired by fun.</Sub>
         </TPWrapper>
         <TPWrapper>
             <TwoPanel
@@ -36,7 +43,10 @@ export const About = () => {
                 a={<Image src={us2} alt="" />}
                 b={<Body>We’ve published ten games with publishers worldwide. Our games have sold more than 100.000 copies in twelve countries. Working with big and small publishers from all over the world is inspiring and the key to making great games! Besides the general gaming market, we’ve also designed games and gaming experiences for museums, libraries, schools and therapy centers.</Body>} />
         </TPWrapper>
-        <div>get in contact!</div>
+        <Button onClick={(e) => {
+            window.location.href = "mailto:wedesignboardgames@gmail.com";
+            e.preventDefault();
+        }}>Get In Touch!</Button>
         <BackButton />
     </>
 }
