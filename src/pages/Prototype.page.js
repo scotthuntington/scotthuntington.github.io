@@ -7,6 +7,7 @@ import tooHotCover from "../images/toohotcover.png";
 import ducklingsCover from "../images/ducklingscover.png";
 import { Grid } from "../components/Grid";
 import { TwoPanel } from "../components/TwoPanel";
+import { BackButton } from "../components/BackButton";
 
 
 const title = {
@@ -172,11 +173,6 @@ const Emoji = styled.div`
     padding-right: ${SIZES.LG};
     font-size: 36px;
 `
-const BackLink = styled.div`
-    padding: ${SIZES.XXL} 0px;
-    cursor: pointer;
-    text-decoration: underline;
-`
 const FlavourText = styled.div`
     font-family: "Archivo";
     font-style: italic;
@@ -240,6 +236,6 @@ export const Prototype = () => {
         <FlavourText>{flavourtext[id]}</FlavourText>
         {renderWhatsCool(whatscool[id])}
         {renderComponents(components[id])}
-        <BackLink onClick={() => navigate(-1)}>⬅️ Go Back</BackLink>
+        <BackButton/>
     </div>
 }

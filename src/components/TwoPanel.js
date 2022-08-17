@@ -6,7 +6,6 @@ const BodyWrapper = styled.div`
     display: grid;
     gap: ${SIZES.XL};
     grid-template-columns: auto auto; 
-    grid-auto-rows: 1fr;
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
