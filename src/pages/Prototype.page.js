@@ -6,6 +6,7 @@ import svfCover from "../images/svfcover.png";
 import tooHotCover from "../images/toohotcover.png";
 import ducklingsCover from "../images/ducklingscover.png";
 import { Grid } from "../components/Grid";
+import { TwoPanel } from "../components/TwoPanel";
 
 
 const title = {
@@ -70,10 +71,10 @@ const flavourtext = {
 
 const components = {
     treasurebeach: [
-        "30 beach maps(double - sided)",
+        "30 beach maps (double-sided)",
         "1 map holder",
         "64 sand chips",
-        "2 special tokens(parrot / bomb)",
+        "2 special tokens (parrot / bomb)",
         "1 custom die"],
     toohot: ["63 chilli tokens in 3 colours",
         "3 dice (numbered 0-5)",
@@ -98,20 +99,20 @@ const components = {
 };
 
 const Title = styled.div`
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 900;
-    padding-bottom: ${SIZES.XL};
-`
-const BodyWrapper = styled.div`
-    display: flex;
+    padding-bottom: ${SIZES.XXL};
+    text-align: center;
+    transform: rotate(-2deg);
 `
 const Image = styled.img`
     max-height: 250px;
     height: auto;
+    border: 2px solid black;
     box-shadow: ${SIZES.MD} ${SIZES.MD} black;
 `;
 const VideoContainer = styled.div`
-position: relative;
+    position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 `;
@@ -124,7 +125,6 @@ const Video = styled.iframe`
 `;
 const Body = styled.div`
     flex: 1;
-    padding: 0px ${SIZES.LG} ${SIZES.LG} 0px;
     font-family: "Archivo";
 `
 
@@ -230,11 +230,9 @@ export const Prototype = () => {
 
     return <div>
         <Title>{title[id]}</Title>
-
-        <BodyWrapper>
-            <Body>{text[id]}</Body>
-            <Image src={image[id]} alt="" />
-        </BodyWrapper>
+        <TwoPanel
+            a={<Image src={image[id]} alt="" />}
+            b={<Body>{text[id]}</Body>} />
         {renderShortInfo(shortinfo[id])}
         <VideoContainer>
             <Video frameBorder="0" src={`https://www.youtube.com/embed/${videoEmbedIds[id]}`} />

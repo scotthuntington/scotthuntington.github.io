@@ -9,6 +9,7 @@ import atlant from "../images/atlant.webp";
 import bigdig from "../images/bigdig.webp";
 import styled from "styled-components";
 import { SIZES } from "../constants";
+import { Title } from "../components/Title";
 
 const data = [{
     title: 'Hammer Time',
@@ -27,13 +28,13 @@ const data = [{
     image: jr,
     flavour: 'An “I split, you choose” game about knowing when to stash your booty.',
     date: "Abacus: 2016",
-    link:"https://www.youtube.com/watch?v=Ze71M0Bf-gY&ab_channel=StonemaierGames"
+    link: "https://www.youtube.com/watch?v=Ze71M0Bf-gY&ab_channel=StonemaierGames"
 }, {
     title: 'Gobi',
     image: gobi,
     flavour: 'Connect lost tribes with your caravan of camels, gaining useful gifts.',
     date: "Capsicum: 2018",
-    link:"https://www.youtube.com/watch?v=1YuuEGGmUbI&ab_channel=BoardGameGeek"
+    link: "https://www.youtube.com/watch?v=1YuuEGGmUbI&ab_channel=BoardGameGeek"
 }, {
     title: 'Atlandice',
     image: atlant,
@@ -76,7 +77,7 @@ const Image = styled.img`
     width: auto;
     margin: ${SIZES.LG};
 `
-const Title = styled.div`
+const GameTitle = styled.div`
     padding: ${SIZES.XL} 0 ${SIZES.LG} 0;
     font-weight: 900;
 `
@@ -92,10 +93,13 @@ export const Ludography = () => {
     const renderBox = (g) => <Wrapper onClick={() => window.open(g.link, '_black')} color={g.color}>
         <Image src={g.image} alt="" />
         <div>
-            <Title>{g.title}</Title>
+            <GameTitle>{g.title}</GameTitle>
             <Flavour>{g.flavour}</Flavour>
             <Date>({g.date})</Date>
         </div>
     </Wrapper>
-    return <Grid data={data} elementRenderer={renderBox} />
+    return <>
+        <Title>Published Games</Title>
+        <Grid data={data} elementRenderer={renderBox} />
+    </>
 }

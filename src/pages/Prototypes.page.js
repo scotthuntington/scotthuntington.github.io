@@ -6,6 +6,7 @@ import tooHotCover from "../images/toohotcover.png";
 import ducklingsCover from "../images/ducklingscover.png";
 import { SIZES } from "../constants";
 import { useNavigate } from "react-router-dom";
+import { Title } from "../components/Title";
 
 const games = [
     {
@@ -48,7 +49,7 @@ const games = [
         flavour: 'Combine guesswork and deduction to reveal the best treasure on the beach.',
         image: 'XXX',
         color: '#adcbde',
-        link: "teasurebeach"
+        link: "treasurebeach"
     }
 ]
 const Wrapper = styled.div`
@@ -67,7 +68,7 @@ const Image = styled.img`
     box-shadow: 10px 10px black;
     margin: ${SIZES.LG};
 `
-const Title = styled.div`
+const GameTitle = styled.div`
     padding: ${SIZES.XL} 0 ${SIZES.LG} 0;
     font-weight: 900;
 `
@@ -80,10 +81,13 @@ export const Prototypes = () => {
     const renderBox = (g) => <Wrapper onClick={() => navigate(g.link)} color={g.color}>
         <Image src={g.image} alt="" />
         <div>
-            <Title>{g.title}</Title>
+            <GameTitle>{g.title}</GameTitle>
             <Flavour>{g.flavour}</Flavour>
         </div>
     </Wrapper>
 
-    return <Grid data={games} elementRenderer={renderBox} />
+    return <>
+        <Title>Prototypes</Title>
+        <Grid data={games} elementRenderer={renderBox} />
+    </>
 }
