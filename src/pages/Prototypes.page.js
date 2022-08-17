@@ -13,38 +13,43 @@ import { inverse } from "../utils";
 
 const games = [
     {
-        title: 'Ducklings',
-        flavour: 'Collect ducks and nestle into various landscapes in this set collection game.',
-        image: ducklingsCover,
-        color: "#42f575",
-        link: "ducklings"
+        title: 'Tesseract',
+        flavour: 'Use a Rubik’s cube to pick up and deliver energy to a prospering utopian planet.',
+        image: tessCover,
+        color: "#95f2f5",
+        weight: "(Weight: Medium)",
+        link: "tesseract"
     },
     {
         title: 'The Temple On The Moon',
         flavour: 'Place astronauts in chains on a three dimensional temple board to fulfil multiple goals.',
         image: totmCover,
         color: "#f52aee",
+        weight: "(Weight: Medium)",
         link: "ttotm"
-    },
-    {
-        title: 'Tesseract',
-        flavour: 'Use a Rubik’s cube to pick up and deliver energy to a prospering utopian planet.',
-        image: tessCover,
-        color: "#95f2f5",
-        link: "tesseract"
     },
     {
         title: 'Supervillain Fortress',
         flavour: 'Draft dice to construct a multi-level evil fortress with all the bells and whistles.',
         image: svfCover,
         color: '#d47b00',
+        weight: "(Weight: Family +)",
         link: "svf"
+    },
+    {
+        title: 'Ducklings',
+        flavour: 'Collect ducks and nestle into various landscapes in this set collection game.',
+        image: ducklingsCover,
+        color: "#42f575",
+        weight: "(Weight: Family +)",
+        link: "ducklings"
     },
     {
         title: 'Too Hot',
         flavour: 'Try your luck collecting hot spices in this interactive, casual dice rolling game.',
         image: tooHotCover,
         color: '#f7f488',
+        weight: "(Weight: Casual)",
         link: "toohot"
     },
     {
@@ -52,6 +57,7 @@ const games = [
         flavour: 'Combine guesswork and deduction to reveal the best treasure on the beach.',
         image: treasureCover,
         color: '#adcbde',
+        weight: "(Weight: All ages)",
         link: "treasurebeach"
     }
 ]
@@ -83,7 +89,11 @@ const GameTitle = styled.div`
 const Flavour = styled.div`
     font-style: italic;
 `
-
+const Weight = styled.div`
+    padding-top: ${SIZES.MD};
+    font-style: italic;
+    font-size: smaller;
+`
 export const Prototypes = () => {
     let navigate = useNavigate();
     const renderBox = (g) => <Wrapper onClick={() => { navigate(g.link); window.scrollTo(0, 0) }} color={g.color}>
@@ -91,6 +101,7 @@ export const Prototypes = () => {
         <div>
             <GameTitle>{g.title}</GameTitle>
             <Flavour>{g.flavour}</Flavour>
+            <Weight>{g.weight}</Weight>
         </div>
     </Wrapper>
 
