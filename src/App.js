@@ -13,6 +13,9 @@ const Outer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: ${SIZES.XL};
+  @media (max-width: 600px) {
+    padding: ${SIZES.LG};
+  }
 `
 
 const Main = styled.div`
@@ -46,7 +49,7 @@ function App() {
             </Route>
             <Route path="about" element={<About />} />
             <Route path="/404" element={<PageNotFound />} />
-            <Route path="*" element={<Navigate replace to="/404"/>} />
+            <Route path="*" element={<Navigate replace to="/404" />} />
           </Routes>
         </Content>
       </Main>

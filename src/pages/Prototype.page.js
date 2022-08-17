@@ -113,9 +113,6 @@ const Title = styled.div`
     text-align: center;
     transform: rotate(-2deg);
 `
-const Container = styled.div`
-    width: 90%;
-`
 const Image = styled.img`
     max-height: 250px;
     height: auto;
