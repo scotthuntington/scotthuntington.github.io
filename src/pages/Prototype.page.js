@@ -1,6 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom"
-import styled from "styled-components"
-import { SIZES } from "../constants"
+import { useNavigate, useParams } from "react-router-dom";
+import styled from "styled-components";
+import { SIZES } from "../constants";
 import totmCover from "../images/totmcover.png";
 import svfCover from "../images/svfcover.png";
 import tooHotCover from "../images/toohotcover.png";
@@ -21,7 +21,7 @@ const title = {
     svf: "Supervillain Fortress",
     toohot: "Too Hot",
     treasurebeach: "Treasure Beach",
-}
+};
 const image = {
     tesseract: tessCover,
     ttotm: totmCover,
@@ -29,7 +29,7 @@ const image = {
     svf: svfCover,
     toohot: tooHotCover,
     treasurebeach: treasureCover,
-}
+};
 
 const SUPABABES = "wqZMWzFPQHQ";
 
@@ -40,15 +40,15 @@ const videoEmbedIds = {
     svf: "2DgzE2_dz68",
     toohot: SUPABABES,
     treasurebeach: SUPABABES,
-}
+};
 const text = {
-    tesseract: "TESSERACT is a pick-up-and-deliver game with a literal twist. On your turn, twist your Rubik’s Cube once and carry out the actions you can see. You can navigate your TESSERACT ship around the utopian planet, pick up waste, refine it mid-flight and deliver the resulting energy to the cities that need it, thus gaining prosperity. You can also visit the city councils to hire specialists that will support your TESSERACT’S crew and unlock special abilities. Hiring three specialists will give you a bonus and permanent upgrade, building your engine further. Be the first to gain 100 prosperity to win the game! If you want to know more, get in touch. Thanks for watching!",
-    ttotm: "THE TEMPLE ON THE MOON is an interactive, worker chaining game that takes place on a 3d moon temple. On your turn, place an astronaut in a free room in the temple and carry out the action. Astronauts must exist in a chain, unless you play a crystal to break the chain. During each round, you can enter the offering chambers to sacrifice to the moon gods what they desire, and at the end of the round you can win their favour by achieving special formations, having the most astronauts in the favoured side of the temple, or holding on to blue crystals. The four amulets provide the players with special powers that can be used over and over again until they are taken by someone else. Once a favour marker has reached the top of the temple, the game ends and the player with the most points is the winner. If you want to know more, get in touch. Thanks for watching!",
-    ducklings: "DUCKLINGS is a spatial card drafting game for two to four players. On your turn, take an entire row or column of ducklings from the flock, making sure to never go over your strict hand limit of 8 cards. You can also play a row of ducks, provided you have at least three. When you do so, place a duckling on one of the two environment boards chosen randomly at the start of the game, if your row meets the requirements for it. Longer rows score more points, but shorter rows are quicker to play, letting you nestle in more lucrative spots in the landscape. You can also call upon the help of a big bird, but once you use its special ability, it flies to your left neighbour. With 5 boards and 4 big birds, DUCKLINGS has high replayability with a simple rule set, while being deeper than it lets on. If you want to know more, get in touch. Thanks for watching!",
-    svf: "SUPERVILLAIN FORTRESS is a three dimensional tile laying game for two to four evil geniuses. On your turn, pick a die from the centre of the table and build some scaffolding on a matching space. If you cover a square with a special action, take it immediately. You can chain actions if you’re clever! Once you have enough scaffolding, you can add a level to your evil lair, and make that tile more expensive for your opponents to build. Some dice and special actions allow you to earn money, which you can use to take extra actions, purchase expensive tiles or build menacing watchtowers. The first player to build their fourth level ends the game, and the player with the most visible points from above is the winner! For enquiries, get in touch. Thanks for watching!",
-    toohot: "TOO HOT is a casual, try your luck game for two to four players, perfect for the pub or a relaxed game night with the family. On your turn, roll a die, pick a pile, and take that many spices. Then, do the same again, picking a different pile each time, and your turn is over. If anyone ever takes the last chip from a pile, see who has the most! That person gets a point, but be careful: anyone with more than 7 spices in one colour is TOO HOT, and not eligible for the point. The first player to 6 points wins! TOO HOT is explained in one minute, but knowing when to pull back, or wait for a perfect roll, makes for a tense and exciting lightweight game. For enquiries, get in touch. Thanks for watching!",
-    treasurebeach: "TREASURE BEACH is a guessing and deduction game for all ages. On your turn, roll the die and dig a space on that side of the beach. Did you reveal a treasure icon? Great! You can keep the pearl! Treasure always comes in clumps, so now all players know there is a group of treasure of that size here. Did you reveal the bomb or the parrot? Then take that token! There is only one parrot or bomb in every row and column. The player holding the bomb will lose points and the player with the parrot will get points at the end! Once enough treasure has been revealed, count your pearls and see who won! If you want to know more, get in touch. Thanks for watching!",
-}
+    tesseract: "In Tesseract: Dimension of Tomorrow you are the captain of a grandiose airship, represented by a Rubik’s Cube. You will tactically twist your cube throughout the game to pick up waste, refine it into precious energy and deliver it to different cities. You will be able to invite citizens and specialists to your Tesseract, who will support you in game-changing ways. Will you be able to maintain the complex network of sustainability and prosperity?",
+    ttotm: "Discover the secrets of The Temple On The Moon! Take turns placing your team of astronauts in a chain to explore the temple’s rooms and trigger clever actions. This spatial worker placement game plays out on an eye-catching 3D temple board, on which players will strive to build formations, collect powerful amulets and appease the forgotten lunar gods!",
+    ducklings: "Ducklings is a highly interactive spatial drafting game in which you’re striving to find the perfect landscapes for your flock of ducks. Cleverly pick adjacent cards from the tableau to build a set of consecutive numbers in just the right colors to nestle in before the other players. With a simple rule set and different scoring boards for each game, Ducklings delivers a more-than-meets-the-eye gaming experience.",
+    svf: "Draft dice and build your ultimate 3D-Supervillain Fortress with point-unlocking polyomino tiles. In this sleek game of puzzly tile-laying and snappy drafting you’ll be able to cleverly chain actions and build your imposing fortress to display malice and might!",
+    toohot: "Roll dice and grab some spice! The more, the tastier - but beware! If you grab more than seven of one spice, it’s just way too hot and you don’t get points when the spices run out. Explained in a minute, this casual dice game brings heat and tension to the table and will be played again and again by players of all ages!",
+    treasurebeach: "Treasure Beach combines simple deduction and guessing in a one-of-a-kind game of treasure hunting for all ages. Players take turns discovering the game board, revealing treasures, tools or traps! And since every revealed spot gives you a clue of what is close by, you’ll have a good chance to uncover the greatest treasures!",
+};
 
 const shortinfo = {
     tesseract: ["2-4", "60", "12+"],
@@ -57,25 +57,25 @@ const shortinfo = {
     svf: ["2-4", "45", "10+"],
     toohot: ["2-4", "15", "8+"],
     treasurebeach: ["2-4", "20-30", "6+"],
-}
+};
 
 const whatscool = {
-    tesseract: ["Rubik's Cubes!", "Thinky Puzzles!", "USP!"],
+    tesseract: ["Rubik's Cubes!", "Simple And Smart!", "Visually Striking!"],
     ttotm: ["3-Dimensional Board!", "Interactive Turns!", "Unique Theme!"],
     ducklings: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
     svf: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
     toohot: ["Engaging but casual!", "Anyone can learn!", "Addictive!"],
     treasurebeach: ["Introduction to deduction!", "Every turn exciting!", "Enjoyable at all ages!"],
-}
+};
 
 const flavourtext = {
-    tesseract: "TESSERACT is a pick-up-and-deliver game with a literal twist.",
-    ttotm: "THE TEMPLE ON THE MOON is an interactive, worker chaining game that takes place on a 3d moon temple.",
-    ducklings: "DUCKLINGS is a spatial card drafting game for two to four players.",
-    svf: "SUPERVILLAIN FORTRESS is a three dimensional tile laying game for two to four evil geniuses.",
-    toohot: "TOO HOT is a casual, try your luck game for two to four players, perfect for the pub or a relaxed game night with the family.",
-    treasurebeach: "TREASURE BEACH is a guessing and deduction game for all ages.",
-}
+    tesseract: "A new tomorrow has dawned and the world is prospering. Essential to this emerging Utopia are the Tesseracts - grandiose airships outfitted with ingenious reclamation technologies which refine waste into clean energy. You’re a captain of one of these Tesseracts and it’s time to show your skills of navigation and planning to uphold the network of recycling and multinational exchange to sustain prosperity!",
+    ttotm: "Your lunar expedition has discovered a forgotten temple on the dark side of the moon. Cunningly, your team delves into the dark halls of the temple, securing artefacts and galactic crystals. Which team will uncover the secrets of the temple?",
+    ducklings: "Line up, little ducklings! It’s time to flock together and find a good spot at the lake and river to find the freshest water … before other ducklings nestle in before you.",
+    svf: "You’re the new menace in town but have no imposing castle to display your might. Order your underlings to build your ultimate supervillain fortress and let everyone know that you’re the mightiest supervillain in town!",
+    toohot: "Chili, Pepper, Ginger! Spice up your game nights with this exciting try-your-luck dice chucker. The spicier, the better. But caution … contents may be too hot!",
+    treasurebeach: "Your pirate ship has landed on Treasure Beach. Great treasures are buried underneath the sand! Every time you dig you’ll find treasure or discover a clue where the next chest is located. Get help from your trusty parrot and beware the bombs!",
+};
 
 const components = {
     treasurebeach: [
@@ -103,7 +103,13 @@ const components = {
         "30 crystals",
         "36 cards",
         "4 Amulet tokens"],
-    tesseract: ["4 2x2x2 Rubiks Cubes", "other stuff"],
+    tesseract: ["4 2x2x2 Rubik’s Cubes",
+        "8 map tiles",
+        "1 scoring board",
+        "60 resources cubes (4 colors)",
+        "4 player boards",
+        "80 contact & council cards",
+        "12 player tokens",]
 };
 
 const Title = styled.div`
@@ -112,7 +118,7 @@ const Title = styled.div`
     padding-bottom: ${SIZES.XXL};
     text-align: center;
     transform: rotate(-2deg);
-`
+`;
 const Image = styled.img`
     max-height: 250px;
     height: auto;
@@ -134,7 +140,7 @@ const Video = styled.iframe`
 const Body = styled.div`
     flex: 1;
     font-family: "Archivo";
-`
+`;
 
 const ShortInfoWrapper = styled.div`
     max-width: 720px;
@@ -151,7 +157,7 @@ const ShortInfoWrapper = styled.div`
         grid-template-columns: 1fr;
     }
 
-`
+`;
 
 const ShortInfoSection = styled.div`
     border-right: 2px solid black;
@@ -166,7 +172,7 @@ const ShortInfoSection = styled.div`
         border-right: 0px;
         border-bottom: 2px solid black;
     }
-`
+`;
 const CoolBarWrapper = styled.div`
     max-width: 720px;
     display: grid;
@@ -177,7 +183,7 @@ const CoolBarWrapper = styled.div`
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
-`
+`;
 const CoolBar = styled.div`
     background-color: black;
     text-align: center;
@@ -187,12 +193,12 @@ const CoolBar = styled.div`
     font-family: "Archivo";
     transform: rotate(-2deg);
 
-`
+`;
 const Emoji = styled.div`
     font-family: "Noto Emoji";
     padding-right: ${SIZES.LG};
     font-size: 36px;
-`
+`;
 const FlavourText = styled.div`
     font-family: "Archivo";
     font-style: italic;
@@ -201,7 +207,7 @@ const FlavourText = styled.div`
     text-align: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-`
+`;
 const Components = styled.div`
     padding: ${SIZES.LG} 0px ${SIZES.XL} 0px;
 `;
@@ -210,11 +216,11 @@ padding-bottom: ${SIZES.MD};
 
 
 
-`
+`;
 const ComponentText = styled.div`
     font-family: "Archivo";
     padding: ${SIZES.MD};
-`
+`;
 export const Prototype = () => {
 
     const { id } = useParams();
@@ -224,24 +230,24 @@ export const Prototype = () => {
             <ShortInfoSection><Emoji>👪</Emoji>{si[0]}</ShortInfoSection>
             <ShortInfoSection><Emoji>🕔</Emoji>{si[1]}</ShortInfoSection>
             <ShortInfoSection><Emoji>👶</Emoji>{si[2]}</ShortInfoSection>
-        </ShortInfoWrapper>
-    }
+        </ShortInfoWrapper>;
+    };
 
     const renderWhatsCool = (wc) => {
         return <CoolBarWrapper>
             <CoolBar>{wc[0]}</CoolBar>
             <CoolBar>{wc[1]}</CoolBar>
             <CoolBar>{wc[2]}</CoolBar>
-        </CoolBarWrapper>
-    }
+        </CoolBarWrapper>;
+    };
 
     const renderComponents = (cs) => {
-        const elementRenderer = (c) => <ComponentText>{c}</ComponentText>
+        const elementRenderer = (c) => <ComponentText>{c}</ComponentText>;
         return <Components>
             <ComponentHeader>Components:</ComponentHeader>
             <Grid data={cs} elementRenderer={elementRenderer} />
-        </Components>
-    }
+        </Components>;
+    };
 
     return <>
         <Title>{title[id]}</Title>
@@ -260,5 +266,5 @@ export const Prototype = () => {
             e.preventDefault();
         }}>Interested?</Button>
         <BackButton />
-    </>
-}
+    </>;
+};
