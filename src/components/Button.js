@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { SIZES, COLORS } from "../constants"
 
-const StyledButton = styled.div`
+const StyledButton = styled.a`
     border: 2px solid black;
     background-color: ${COLORS.PRIMARY};
     box-shadow: ${SIZES.MD} ${SIZES.MD} black;
@@ -17,4 +17,4 @@ const StyledButton = styled.div`
     }
 `
 
-export const Button = ({ children }) => <StyledButton>{children}</StyledButton>
+export const Button = ({ children, subject }) => <StyledButton href={`mailto:wedesignboardgames@gmail.com?subject=${subject}&body=Hi Scott and Shaun!`}>{children}</StyledButton>

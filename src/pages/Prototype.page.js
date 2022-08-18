@@ -261,10 +261,7 @@ export const Prototype = () => {
         <FlavourText>{flavourtext[id]}</FlavourText>
         {renderWhatsCool(whatscool[id])}
         {renderComponents(components[id])}
-        <Button onClick={(e) => {
-            window.location.href = "mailto:wedesignboardgames@gmail.com";
-            e.preventDefault();
-        }}>Interested?</Button>
+        <Button subject={title[id]}>Interested?</Button>
         <BackButton />
     </>;
 };

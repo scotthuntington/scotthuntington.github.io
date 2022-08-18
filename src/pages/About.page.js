@@ -43,10 +43,7 @@ export const About = () => {
                 a={<Image src={us2} alt="" />}
                 b={<Body>We’ve published ten games with publishers worldwide. Our games have sold more than 100.000 copies in twelve countries. Working with big and small publishers from all over the world is inspiring and the key to making great games! Besides the general gaming market, we’ve also designed games and gaming experiences for museums, libraries, schools and therapy centers.</Body>} />
         </TPWrapper>
-        <Button onClick={(e) => {
-            window.location.href = "mailto:wedesignboardgames@gmail.com";
-            e.preventDefault();
-        }}>Get In Touch!</Button>
+        <Button subject={"Hey guys!"}>Get In Touch!</Button>
         <BackButton />
     </>
 }
