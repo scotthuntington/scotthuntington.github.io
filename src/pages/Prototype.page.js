@@ -34,12 +34,12 @@ const image = {
 const SUPABABES = "wqZMWzFPQHQ";
 
 const videoEmbedIds = {
-    tesseract: SUPABABES,
+    tesseract: "1054P-RdePA",
     ttotm: "vT9Z6zf1f_8",
     ducklings: "WibZzmwVaVo",
     svf: "2DgzE2_dz68",
-    toohot: SUPABABES,
-    treasurebeach: SUPABABES,
+    toohot: "79kKxERdtpg",
+    treasurebeach: "rV6herbB6QM",
 };
 const text = {
     tesseract: "In Tesseract: Dimension of Tomorrow you are the captain of a grandiose airship, represented by a Rubik’s Cube. You will tactically twist your cube throughout the game to pick up waste, refine it into precious energy and deliver it to different cities. You will be able to invite citizens and specialists to your Tesseract, who will support you in game-changing ways. Will you be able to maintain the complex network of sustainability and prosperity?",
