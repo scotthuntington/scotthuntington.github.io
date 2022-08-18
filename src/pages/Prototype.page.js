@@ -62,7 +62,7 @@ const shortinfo = {
 const whatscool = {
     tesseract: ["Rubik's Cubes!", "Simple And Smart!", "Visually Striking!"],
     ttotm: ["3-Dimensional Board!", "Interactive Turns!", "Unique Theme!"],
-    ducklings: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
+    ducklings: ["Spatial card-drafting", "Simple & elegant", "Interactive card play"],
     svf: ["Build a 3D Structure!", "Interactive Drafting!", "Clever Puzzle Elements!"],
     toohot: ["Engaging but casual!", "Anyone can learn!", "Addictive!"],
     treasurebeach: ["Introduction to deduction!", "Every turn exciting!", "Enjoyable at all ages!"],
