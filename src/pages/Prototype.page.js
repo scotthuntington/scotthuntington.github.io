@@ -31,8 +31,6 @@ const image = {
     treasurebeach: treasureCover,
 };
 
-const SUPABABES = "wqZMWzFPQHQ";
-
 const videoEmbedIds = {
     tesseract: "1054P-RdePA",
     ttotm: "vT9Z6zf1f_8",

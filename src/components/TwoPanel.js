@@ -9,6 +9,7 @@ const BodyWrapper = styled.div`
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
+    padding-bottom: ${SIZES.LG};
 `
 
 export const TwoPanel = ({ a, b }) => {
